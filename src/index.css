@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+@layer components {
+  .nav-link {
+    @apply relative transition-colors duration-300;
+  }
+  .nav-link::before {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-[#223C8C] transition-all duration-300;
+  }
+  .nav-link:hover::before {
+    @apply w-full;
+  }
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #0146CF;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+  border-radius: 1rem;
+}
+
+.contact-card:hover::before {
+  height: 100%;
+}
+
+.contact-card:hover .text-gray-700 {
+  color: white !important;
+}
+
+.contact-card:hover .hover:text-white {
+  color: white;
+}
+
+.contact-card:hover .hover:text-white\/90 {
+  color: rgba(255, 255, 255, 0.9);
+}
