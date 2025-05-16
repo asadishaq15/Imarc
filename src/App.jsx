@@ -32,17 +32,17 @@ function LandingPage() {
       image: blog1,
       summary: "Learn how digital advertising can transform your brand’s reach.",
       content: `
-        Digital advertising has revolutionized the way brands connect with their audiences. In today's fast-paced digital landscape, leveraging online platforms allows businesses to target specific demographics with precision, optimize campaigns in real-time, and measure ROI effectively.
+      Digital advertising has revolutionized the way brands connect with their audiences. In today's fast-paced digital landscape, leveraging online platforms allows businesses to target specific demographics with precision, optimize campaigns in real-time, and measure ROI effectively.
 
-        At iMarc, we specialize in creating data-driven digital campaigns that maximize reach and engagement. Whether it's through social media ads, Google Ads, or programmatic advertising, our strategies are designed to deliver measurable results. For instance, one of our recent campaigns for a retail client saw a 200% increase in website traffic and a 50% boost in sales within three months.
-
-        Key benefits of digital campaigns include:
-        - **Targeted Reach**: Reach the right audience with advanced targeting options.
-        - **Cost Efficiency**: Optimize budgets with real-time adjustments.
-        - **Measurable Results**: Track performance with detailed analytics.
-
-        Ready to transform your brand's digital presence? Contact iMarc today to get started!
-      `,
+      At iMarc, we specialize in creating data-driven digital campaigns that maximize reach and engagement. Whether it's through social media ads, Google Ads, or programmatic advertising, our strategies are designed to deliver measurable results. For instance, one of our recent campaigns for a retail client saw a 200% increase in website traffic and a 50% boost in sales within three months.
+    `,
+      contentbold1: `Targeted Reach`,
+      content2: `Reach the right audience with advanced targeting options.`,
+      contentbold2: `Cost Efficiency`,
+      content3: `Optimize budgets with real-time adjustments.`,
+      contentbold4: `Measurable Results`,
+      content4: `Track performance with detailed analytics.`,
+      para: `Ready to transform your brand's digital presence? Contact iMarc today to get started!`,
       date: "May 10, 2025",
       author: "Jane Smith",
     },
@@ -52,16 +52,19 @@ function LandingPage() {
       image: blog2,
       summary: "Tips to create visuals that leave a lasting impression.",
       content: `
-        Visual design plays a crucial role in capturing audience attention and conveying your brand message. At iMarc, we believe that impactful design goes beyond aesthetics—it's about creating an emotional connection with your audience.
-
-        Here are some tips to design for impact:
-        - **Understand Your Audience**: Tailor your visuals to resonate with your target demographic.
-        - **Use Bold Colors**: Colors like our signature #223C8C can evoke trust and professionalism.
-        - **Simplify Your Message**: Clear, concise visuals are more memorable.
-        - **Consistency is Key**: Maintain a cohesive style across all brand assets.
-
-        Our design team recently worked with a tech startup to revamp their branding. By incorporating bold visuals and a streamlined design system, we helped them increase user engagement by 35%. Let iMarc help you create visuals that leave a lasting impression!
-      `,
+      Visual design plays a crucial role in capturing audience attention and conveying your brand message. At iMarc, we believe that impactful design goes beyond aesthetics—it's about creating an emotional connection with your audience.
+    `,
+      contentbold1: `Understand Your Audience`,
+      content2: `Tailor your visuals to resonate with your target demographic.`,
+      contentbold2: `Use Bold Colors`,
+      content3: `Colors like our signature #223C8C can evoke trust and professionalism.`,
+      contentbold4: `Simplify Your Message`,
+      content4: `Clear, concise visuals are more memorable.`,
+      contentbold5: `Consistency is Key`,
+      content5: `Maintain a cohesive style across all brand assets.`,
+      para: `
+      Our design team recently worked with a tech startup to revamp their branding. By incorporating bold visuals and a streamlined design system, we helped them increase user engagement by 35%. Let iMarc help you create visuals that leave a lasting impression!
+    `,
       date: "May 12, 2025",
       author: "Emily Johnson",
     },
@@ -71,17 +74,21 @@ function LandingPage() {
       image: blog3,
       summary: "Optimize your ad placements for maximum ROI.",
       content: `
-        Effective media planning is the backbone of a successful advertising campaign. It involves strategically selecting the right channels, timing, and audience to ensure your message reaches the right people at the right time.
+      Effective media planning is the backbone of a successful advertising campaign. It involves strategically selecting the right channels, timing, and audience to ensure your message reaches the right people at the right time.
 
-        At iMarc, we take a data-driven approach to media planning:
-        - **Audience Analysis**: We identify your target audience's media consumption habits.
-        - **Channel Selection**: We choose the best platforms, from TV and radio to digital and social media.
-        - **Budget Optimization**: We allocate resources to maximize ROI.
+      At iMarc, we take a data-driven approach to media planning:
+    `,
+      contentbold1: `Audience Analysis`,
+      content2: `We identify your target audience's media consumption habits.`,
+      contentbold2: `Channel Selection`,
+      content3: `We choose the best platforms, from TV and radio to digital and social media.`,
+      contentbold4: `Budget Optimization`,
+      content4: `We allocate resources to maximize ROI.`,
+      para: `
+      For a recent campaign, we helped a client in the healthcare sector achieve a 30% increase in lead generation by optimizing their media placements across digital and traditional channels. Our strategies ensure your budget is spent wisely, delivering measurable results.
 
-        For a recent campaign, we helped a client in the healthcare sector achieve a 30% increase in lead generation by optimizing their media placements across digital and traditional channels. Our strategies ensure your budget is spent wisely, delivering measurable results.
-
-        Contact iMarc to learn how our media planning expertise can boost your campaign performance!
-      `,
+      Contact iMarc to learn how our media planning expertise can boost your campaign performance!
+    `,
       date: "May 14, 2025",
       author: "Mark Wilson",
     },
@@ -277,11 +284,11 @@ function LandingPage() {
                     Ms. Creative Lead
                   </h3>
                   <p className="mt-2 text-gray-600 text-center lg:text-left">
-                    With 15+ years of experience, Ms. Creative Lead specializes in crafting compelling ad campaigns, leveraging cutting-edge strategies and innovative designs to elevate brands worldwide.
+                    With years of experience, Ms. Creative Lead specializes in crafting compelling ad campaigns, leveraging cutting-edge strategies and innovative designs to elevate brands worldwide.
                   </p>
                   <div className="mt-4 flex justify-center lg:justify-start space-x-4 space-y-3 lg:space-y-0 text-sm text-gray-500 flex-wrap">
-                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">17+ Years of Experience</div>
-                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">1000+ Clients</div>
+                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">Years of Experience</div>
+                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">500+ Clients</div>
                     <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">95% Success</div>
                   </div>
                 </div>
@@ -370,35 +377,99 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Blog Modal */}
       {selectedBlog && (
-        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50">
-          <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full mx-4 sm:mx-6 lg:mx-8 max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-800">{selectedBlog.title}</h2>
+        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80 backdrop-blur-md">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 sm:mx-6 lg:mx-8 max-h-[90vh] overflow-y-auto border border-gray-100">
+            <div className="p-8 sm:p-12">
+              {/* Header Section */}
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight font-ubuntu">
+                  {selectedBlog.title}
+                </h2>
                 <button
                   onClick={closeBlogModal}
-                  className="text-gray-600 hover:text-[#223C8C] transition"
+                  className="text-gray-500 hover:text-[#223C8C] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#223C8C] focus:ring-offset-2 rounded-full"
+                  aria-label="Close modal"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-8 h-8" />
                 </button>
               </div>
-              <img
-                src={selectedBlog.image}
-                alt={selectedBlog.title}
-                className="w-full h-64 object-cover rounded-lg mb-4"
-              />
-              <p className="text-sm text-gray-500 mb-2">
-                By {selectedBlog.author} | {selectedBlog.date}
-              </p>
-              <div className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {selectedBlog.content}
+
+              {/* Image Section */}
+              <div className="relative mb-10">
+                <img
+                  src={selectedBlog.image}
+                  alt={selectedBlog.title}
+                  className="w-full h-80 sm:h-96 object-cover rounded-xl shadow-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
               </div>
-              <div className="mt-6 flex justify-end">
+
+              {/* Meta Information */}
+              <div className="flex items-center space-x-4 mb-8 border-b border-gray-200 pb-4">
+                <span className="font-semibold text-gray-800 text-lg font-ubuntu">By {selectedBlog.author}</span>
+                <span className="text-gray-400">|</span>
+                <span className="text-gray-600 font-ubuntu">{selectedBlog.date}</span>
+              </div>
+
+              {/* Content Section */}
+              <div className="prose prose-lg prose-gray max-w-none font-ubuntu">
+                {/* Render main content paragraphs */}
+                {selectedBlog.content.trim().split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed text-base mb-6 font-ubuntu">
+                    {paragraph}
+                  </p>
+                ))}
+
+                {/* Render bold headings and their paragraphs */}
+                <div className="bg-gray-50 rounded-lg p-6 mb-8 shadow-sm border border-gray-100">
+                  {selectedBlog.contentbold1 && (
+                    <div className="mb-4">
+                      <h4 className="text-lg font-bold text-gray-900 font-ubuntu mb-2">{selectedBlog.contentbold1}</h4>
+                      {selectedBlog.content2 && (
+                        <p className="text-gray-700 leading-relaxed text-base font-ubuntu">{selectedBlog.content2}</p>
+                      )}
+                    </div>
+                  )}
+                  {selectedBlog.contentbold2 && (
+                    <div className="mb-4">
+                      <h4 className="text-lg font-bold text-gray-900 font-ubuntu mb-2">{selectedBlog.contentbold2}</h4>
+                      {selectedBlog.content3 && (
+                        <p className="text-gray-700 leading-relaxed text-base font-ubuntu">{selectedBlog.content3}</p>
+                      )}
+                    </div>
+                  )}
+                  {selectedBlog.contentbold4 && (
+                    <div className="mb-4">
+                      <h4 className="text-lg font-bold text-gray-900 font-ubuntu mb-2">{selectedBlog.contentbold4}</h4>
+                      {selectedBlog.content4 && (
+                        <p className="text-gray-700 leading-relaxed text-base font-ubuntu">{selectedBlog.content4}</p>
+                      )}
+                    </div>
+                  )}
+                  {selectedBlog.contentbold5 && (
+                    <div className="mb-4">
+                      <h4 className="text-lg font-bold text-gray-900 font-ubuntu mb-2">{selectedBlog.contentbold5}</h4>
+                      {selectedBlog.content5 && (
+                        <p className="text-gray-700 leading-relaxed text-base font-ubuntu">{selectedBlog.content5}</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Render closing paragraphs */}
+                {selectedBlog.para && selectedBlog.para.trim().split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed text-base mb-6 font-ubuntu">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              {/* Footer Section */}
+              <div className="mt-12 flex justify-end">
                 <button
                   onClick={closeBlogModal}
-                  className="bg-[#223C8C] text-white py-2 px-4 rounded hover:bg-[#1A2A44] transition"
+                  className="bg-[#223C8C] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#1A2A44] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#223C8C] focus:ring-offset-2 font-ubuntu"
                 >
                   Close
                 </button>
@@ -433,7 +504,7 @@ function LandingPage() {
                   </svg>
                 ))}
               </div>
-              <p className="mt-4 font-semibold text-gray-800">— John Doe, CEO, BrandX</p>
+              <p className="mt-4 font-semibold text-gray-800">— Heyward Nick, CEO, BrandX</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border-b-4 border-[#223C8C]/20 hover:shadow-lg transition-shadow duration-300">
               <blockquote className="text-lg italic text-gray-600 leading-relaxed">
@@ -467,7 +538,7 @@ function LandingPage() {
                   </svg>
                 ))}
               </div>
-              <p className="mt-4 font-semibold text-gray-800">— Michael Chen, Founder, Horizon Enterprises</p>
+              <p className="mt-4 font-semibold text-gray-800">— Simonon Paul, Founder, Horizon Enterprises</p>
             </div>
           </div>
         </div>
@@ -563,9 +634,9 @@ function LandingPage() {
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-white">Contact Us</h3>
               <div className="text-sm text-gray-400 space-y-2">
-                <p>Email: <a href="mailto:info@imarc.com" className="hover:text-[#223C8C] transition">info@imarc.com</a></p>
-                <p>Phone: <a href="tel:+923119813757" className="hover:text-[#223C8C] transition">+92 311 9813757</a></p>
-                <p>Office: 02 First Floor, USAID Plaza, Blue Area, Islamabad</p>
+                <p>Email: <a href="mailto:imarclimitedofficial@gmail.com" className="hover:text-[#223C8C] transition">imarclimitedofficial@gmail.com</a></p>
+                <p>Phone: <a href="tel:+923119813757" className="hover:text-[#223C8C] transition">+44-7429915387</a></p>
+                <p>Office: Unit A7 4-6 Greatorex Street LONDON E1 5NF United Kingdom</p>
               </div>
             </div>
           </div>
