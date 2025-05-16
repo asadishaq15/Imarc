@@ -46,7 +46,7 @@
                     <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
                         <ContactCard title="Campaign Strategy" content="Data-driven strategies to boost your brand’s visibility." iconType="phone" />
                         <ContactCard title="Creative Design" content="Stunning visuals to captivate your audience." iconType="mail" />
-                        <ContactCard title="Media Planning" content=">Strategic placements to maximize reach." iconType="location" />
+                        <ContactCard title="Media Planning" content="Strategic placements to maximize reach." iconType="location" />
                     </div>
                 </div>
             </div>
