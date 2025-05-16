@@ -243,7 +243,7 @@ function LandingPage() {
               <div className="mt-8 flex lg:justify-start justify-center">
                 <button
                   onClick={() => handleScroll(contactRef)}
-                  className="bg-[#223C8C] text-white font-semibold py-3 px-6 rounded-full hover:bg-green-700 transition"
+                  className="bg-[#223C8C] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#1A2A44] transition"
                 >
                   Get Started
                 </button>
@@ -260,31 +260,31 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* About Section */}
+     {/* About Section */}
       <section ref={aboutRef} id="about" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex items-center gap-12">
             <div className="lg:w-1/2 mb-8 lg:mb-0">
               <img
                 src={home2}
-                alt="Creative Lead"
+                alt="iMarc Owner"
                 className="w-full h-auto rounded-4xl object-cover shadow-md"
               />
             </div>
             <div className="lg:w-1/2">
-              <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center lg:text-left">
+              <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center lg:text-left font-ubuntu">
                 About iMarc
               </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                Meet our creative lead and discover why iMarc is your trusted partner in advertising excellence.
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 font-ubuntu">
+                Meet our founder and discover why iMarc is your trusted partner in advertising excellence.
               </p>
               <div className="mt-8 flex flex-col md:flex-row items-center md:space-x-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 text-center lg:text-left">
-                    Ms. Creative Lead
+                  <h3 className="text-xl font-semibold text-gray-800 text-center lg:text-left font-ubuntu">
+                    Muhammad Zeeshan Ayub
                   </h3>
-                  <p className="mt-2 text-gray-600 text-center lg:text-left">
-                    With years of experience, Ms. Creative Lead specializes in crafting compelling ad campaigns, leveraging cutting-edge strategies and innovative designs to elevate brands worldwide.
+                  <p className="mt-2 text-gray-600 text-center lg:text-left font-ubuntu">
+                    As the founder of iMarc, Muhammad Zeeshan Ayub brings extensive expertise in advertising, driving innovative campaigns that elevate brands globally through strategic insight and creative vision.
                   </p>
                   <div className="mt-4 flex justify-center lg:justify-start space-x-4 space-y-3 lg:space-y-0 text-sm text-gray-500 flex-wrap">
                     <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">Years of Experience</div>
@@ -590,7 +590,7 @@ function LandingPage() {
                 <input type="email" placeholder="Your Email" className="bg-white p-2 pl-6 w-full" />
                 <input type="text" placeholder="Phone Number" className="bg-white p-2 pl-6 w-full" />
                 <textarea placeholder="Write Your Message" className="bg-white p-2 pl-6 w-full h-32"></textarea>
-                <button type="submit" className="bg-[#223C8C] hover:bg-black text-white py-3 px-6 rounded w-full">
+                <button type="submit" className="bg-[#223C8C] hover:bg-[#1A2A44] text-white py-3 px-6 rounded w-full">
                   Send Your Message
                 </button>
               </form>
