@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Menu, X } from "lucide-react";
-import home1 from '../src/assets/home1.png';
+import home1 from '../src/assets/home1.jpg'; // Replace with a higher-quality image (e.g., home1-hq.jpg)
 import blog1 from '../src/assets/blog1.jpg';
 import blog2 from '../src/assets/blog2.png';
 import blog3 from '../src/assets/blog3.png';
@@ -88,7 +88,11 @@ function LandingPage() {
   ];
 
   const handleScroll = (ref) => {
-    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const headerHeight = 80; // Adjust based on your header height (including padding)
+    window.scrollTo({
+      top: ref.current.offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
   };
 
   const handleInputChange = (e) => {
@@ -113,7 +117,7 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Sticky Header */}
-      <header className="bg-white text-gray-800 shadow-md sticky top-0 z-[999]">
+      <header className="bg-white text-gray-800 shadow-md sticky top-0 z-[999] font-ubuntu">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="text-xl font-bold flex justify-center items-center">
             <img src={logo} alt="iMarc Logo" className="w-18" />
@@ -121,22 +125,22 @@ function LandingPage() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <button onClick={() => handleScroll(homeRef)} className="nav-link hover:text-[#223C8C] font-bold">
+            <button onClick={() => handleScroll(homeRef)} className="nav-link hover:text-[#223C8C] font-bold text-xl">
               Home
             </button>
-            <button onClick={() => handleScroll(aboutRef)} className="nav-link hover:text-[#223C8C] font-bold">
+            <button onClick={() => handleScroll(aboutRef)} className="nav-link hover:text-[#223C8C] font-bold text-xl">
               About
             </button>
-            <button onClick={() => handleScroll(servicesRef)} className="nav-link hover:text-[#223C8C] font-bold">
+            <button onClick={() => handleScroll(servicesRef)} className="nav-link hover:text-[#223C8C] font-bold text-xl">
               Services
             </button>
-            <button onClick={() => handleScroll(blogsRef)} className="nav-link hover:text-[#223C8C] font-bold">
+            <button onClick={() => handleScroll(blogsRef)} className="nav-link hover:text-[#223C8C] font-bold text-xl">
               Blogs
             </button>
-            <button onClick={() => handleScroll(testimonialsRef)} className="nav-link hover:text-[#223C8C] font-bold">
+            <button onClick={() => handleScroll(testimonialsRef)} className="nav-link hover:text-[#223C8C] font-bold text-xl">
               Testimonials
             </button>
-            <button onClick={() => handleScroll(contactRef)} className="nav-link hover:text-[#223C8C] font-bold">
+            <button onClick={() => handleScroll(contactRef)} className="nav-link hover:text-[#223C8C] font-bold text-xl">
               Contact
             </button>
           </nav>
@@ -165,7 +169,7 @@ function LandingPage() {
                 handleScroll(homeRef);
                 setIsOpen(false);
               }}
-              className="text-gray-800 hover:text-[#223C8C] transition text-lg"
+              className="text-gray-800 hover:text-[#223C8C] transition text-xl"
             >
               Home
             </button>
@@ -174,7 +178,7 @@ function LandingPage() {
                 handleScroll(aboutRef);
                 setIsOpen(false);
               }}
-              className="text-gray-800 hover:text-[#223C8C] transition text-lg"
+              className="text-gray-800 hover:text-[#223C8C] transition text-xl"
             >
               About
             </button>
@@ -183,7 +187,7 @@ function LandingPage() {
                 handleScroll(servicesRef);
                 setIsOpen(false);
               }}
-              className="text-gray-800 hover:text-[#223C8C] transition text-lg"
+              className="text-gray-800 hover:text-[#223C8C] transition text-xl"
             >
               Services
             </button>
@@ -192,7 +196,7 @@ function LandingPage() {
                 handleScroll(blogsRef);
                 setIsOpen(false);
               }}
-              className="text-gray-800 hover:text-[#223C8C] transition text-lg"
+              className="text-gray-800 hover:text-[#223C8C] transition text-xl"
             >
               Blogs
             </button>
@@ -201,7 +205,7 @@ function LandingPage() {
                 handleScroll(testimonialsRef);
                 setIsOpen(false);
               }}
-              className="text-gray-800 hover:text-[#223C8C] transition text-lg"
+              className="text-gray-800 hover:text-[#223C8C] transition text-xl"
             >
               Testimonials
             </button>
@@ -210,7 +214,7 @@ function LandingPage() {
                 handleScroll(contactRef);
                 setIsOpen(false);
               }}
-              className="text-gray-800 hover:text-[#223C8C] transition text-lg"
+              className="text-gray-800 hover:text-[#223C8C] transition text-xl"
             >
               Contact
             </button>
@@ -219,65 +223,126 @@ function LandingPage() {
       </header>
 
       {/* Home Section */}
-      <section ref={homeRef} className="bg-gray-100 py-20 container mx-auto">
-        <div className="lg:flex justify-center items-center mx-auto px-4 sm:px-6 lg:px-20 lg:gap-12 w-[100%]">
-          <div className='lg:w-[50%]'>
-            <h1 className="lg:text-7xl sm:text-5xl font-bold text-gray-800 lg:text-start text-center">
-              Elevate Your Brand with iMarc
-            </h1>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lg:text-start text-center">
-              We craft professional advertising campaigns tailored to your unique goals.
-            </p>
-            <div className="mt-8 flex lg:justify-start justify-center">
-              <button
-                onClick={() => handleScroll(contactRef)}
-                className="bg-[#223C8C] text-white font-semibold py-3 px-6 rounded-full hover:bg-green-700 transition"
-              >
-                Get Started
-              </button>
+      <section ref={homeRef} id="home" className="bg-gray-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:flex justify-center items-center gap-12">
+            <div className="lg:w-1/2">
+              <h1 className="lg:text-6xl text-4xl font-bold text-gray-800 lg:text-left text-center">
+                Elevate Your Brand with iMarc
+              </h1>
+              <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto lg:text-left text-center">
+                We craft professional advertising campaigns tailored to your unique goals.
+              </p>
+              <div className="mt-8 flex lg:justify-start justify-center">
+                <button
+                  onClick={() => handleScroll(contactRef)}
+                  className="bg-[#223C8C] text-white font-semibold py-3 px-6 rounded-full hover:bg-green-700 transition"
+                >
+                  Get Started
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="mt-8 flex justify-center lg:w-[50%]">
-            <img src={home1} alt="Hero" className="w-full h-full rounded-4xl shadow-md" />
+            <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-end">
+              <img
+                src={home1} // Replace with a high-quality image (e.g., home1-hq.jpg)
+                alt="Hero"
+                className="w-full lg:w-[450px] border-8 border-white lg:h-[450px] rounded-full shadow-md object-cover" // Fixed width/height for circle
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} className="lg:flex w-[100%] py-16 bg-white px-6 lg:px-8 gap-12">
-        <div className="lg:w-[50%] bg-gray-300 rounded-4xl overflow-hidden mb-4 md:mb-0">
-          <img src={home2} alt="Creative Lead" className="w-full h-full object-cover" />
-        </div>
-        <div className="lg:w-[50%] mx-auto px-4 lg:text-start  text-center">
-          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800">About iMarc</h2>
-          <p className="mt-4 text-gray-600 lg:max-w-3xl">
-            Meet our creative lead and discover why iMarc is your trusted partner in advertising excellence.
-          </p>
-          <div className="mt-8 flex flex-col md:flex-row items-center md:space-x-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800">Ms. Creative Lead</h3>
-              <p className="mt-2 text-gray-600">
-                With 15+ years of experience, Ms. Creative Lead specializes in crafting compelling ad campaigns, leveraging cutting-edge strategies and innovative designs to elevate brands worldwide.
+      <section ref={aboutRef} id="about" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:flex items-center gap-12">
+            <div className="lg:w-1/2 mb-8 lg:mb-0">
+              <img
+                src={home2}
+                alt="Creative Lead"
+                className="w-full h-auto rounded-4xl object-cover shadow-md"
+              />
+            </div>
+            <div className="lg:w-1/2">
+              <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center lg:text-left">
+                About iMarc
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
+                Meet our creative lead and discover why iMarc is your trusted partner in advertising excellence.
               </p>
-              <div className="mt-4 lg:flex lg:justify-start justify-center lg:space-x-4 space-y-3 text-sm text-gray-500">
-                <div className='bg-gray-300 rounded-md shadow-2xl px-6 py-3'>17+Years of Experience</div>
-                <div className='bg-gray-300 rounded-md shadow-2xl px-6 py-3'>1000+ Clients</div>
-                <div className='bg-gray-300 rounded-md shadow-2xl px-6 py-3'>95% Success</div>
+              <div className="mt-8 flex flex-col md:flex-row items-center md:space-x-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 text-center lg:text-left">
+                    Ms. Creative Lead
+                  </h3>
+                  <p className="mt-2 text-gray-600 text-center lg:text-left">
+                    With 15+ years of experience, Ms. Creative Lead specializes in crafting compelling ad campaigns, leveraging cutting-edge strategies and innovative designs to elevate brands worldwide.
+                  </p>
+                  <div className="mt-4 flex justify-center lg:justify-start space-x-4 space-y-3 lg:space-y-0 text-sm text-gray-500 flex-wrap">
+                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">17+ Years of Experience</div>
+                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">1000+ Clients</div>
+                    <div className="bg-gray-300 rounded-md shadow-2xl px-6 py-2">95% Success</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div className='px-6 lg:px-12'>
+      <div ref={servicesRef} className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:px-8">
         <ContactSection />
       </div>
 
-      {/* Blogs Section */}
-      <section ref={blogsRef} className="py-16 bg-white">
+      {/* Services Section */}
+      {/* <section ref={servicesRef} id="services" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center">Our Blogs</h2>
-          <p className="mt-4 text-gray-600 text-center max-w-3xl mx-auto">
+          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center">
+            Our Services
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
+            Comprehensive advertising solutions to amplify your brand’s reach.
+          </p>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#223C8C] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">Campaign Strategy</h3>
+              <p className="mt-2 text-gray-600">Data-driven strategies to boost your brand’s visibility.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#223C8C] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">Creative Design</h3>
+              <p className="mt-2 text-gray-600">Stunning visuals to captivate your audience.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#223C8C] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">Media Planning</h3>
+              <p className="mt-2 text-gray-600">Strategic placements to maximize reach.</p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Blogs Section */}
+      <section ref={blogsRef} id="blogs" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center">
+            Our Blogs
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Stay updated with the latest trends and insights in advertising.
           </p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -288,12 +353,12 @@ function LandingPage() {
                 onClick={() => openBlogModal(blog)}
               >
                 <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover rounded-t-lg mb-4" />
-                <h3 className="text-lg font-semibold text-gray-800">{blog.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{blog.title}</h3>
                 <p className="mt-2 text-gray-600">{blog.summary}</p>
                 <button
                   className="mt-4 inline-block text-[#223C8C] hover:underline"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent card click from triggering modal
+                    e.stopPropagation();
                     openBlogModal(blog);
                   }}
                 >
@@ -307,7 +372,7 @@ function LandingPage() {
 
       {/* Blog Modal */}
       {selectedBlog && (
-        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 ">
+        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50">
           <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full mx-4 sm:mx-6 lg:mx-8 max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
@@ -344,14 +409,15 @@ function LandingPage() {
       )}
 
       {/* Testimonials Section */}
-      <section ref={testimonialsRef} className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 mb-6">What Our Clients Say</h2>
-          <p className="mt-2 text-gray-600 max-w-3xl mx-auto">
+      <section ref={testimonialsRef} id="testimonials" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center mb-6">
+            What Our Clients Say
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Discover the impact of our advertising expertise through the voices of our valued partners.
           </p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Testimonial 1 */}
             <div className="bg-white p-6 rounded-lg shadow-md border-b-4 border-[#223C8C]/20 hover:shadow-lg transition-shadow duration-300">
               <blockquote className="text-lg italic text-gray-600 leading-relaxed">
                 "iMarc’s innovative campaign strategy increased our brand visibility by 150% within six months. Their attention to detail is unmatched."
@@ -369,8 +435,6 @@ function LandingPage() {
               </div>
               <p className="mt-4 font-semibold text-gray-800">— John Doe, CEO, BrandX</p>
             </div>
-
-            {/* Testimonial 2 */}
             <div className="bg-white p-6 rounded-lg shadow-md border-b-4 border-[#223C8C]/20 hover:shadow-lg transition-shadow duration-300">
               <blockquote className="text-lg italic text-gray-600 leading-relaxed">
                 "Their strategic approach doubled our online engagement in just three months, driving a 40% increase in conversions."
@@ -388,8 +452,6 @@ function LandingPage() {
               </div>
               <p className="mt-4 font-semibold text-gray-800">— Sarah Thompson, CMO, TechTrend</p>
             </div>
-
-            {/* Testimonial 3 */}
             <div className="bg-white p-6 rounded-lg shadow-md border-b-4 border-[#223C8C]/20 hover:shadow-lg transition-shadow duration-300">
               <blockquote className="text-lg italic text-gray-600 leading-relaxed">
                 "iMarc’s creative designs and media planning elevated our market presence, resulting in a 25% revenue growth in one year."
@@ -412,106 +474,103 @@ function LandingPage() {
       </section>
 
       {/* Contact Section */}
-      <section ref={contactRef} className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800">Get In Touch</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+      <section ref={contactRef} id="contact" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="lg:text-6xl text-3xl font-bold text-gray-800 text-center">
+            Get In Touch
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Ready to elevate your brand? Let’s start your journey to success together.
           </p>
-          <div className='lg:flex w-[100%] py-6'>
-            <div className='flex flex-col justify-center w-[50%] space-y-12'>
-              <div className='flex items-center gap-6'>
-                <div className='bg-[#223C8C] p-3 rounded-full'>
-                  <FaPhone size={20} className=' text-white w-6 h-6' />
+          <div className="lg:flex gap-12 py-6">
+            <div className="lg:w-1/2 flex flex-col justify-center space-y-12">
+              <div className="flex items-center gap-6">
+                <div className="bg-[#223C8C] p-3 rounded-full">
+                  <FaPhone size={20} className="text-white w-6 h-6" />
                 </div>
-                <div className='flex flex-col justify-start text-start'>
-                  <h2 className='font-bold lg:text-2xl'>Contact</h2>
-                  <p>---</p>
+                <div className="flex flex-col justify-start text-start">
+                  <h3 className="text-xl font-bold">Contact</h3>
+                  <p>+44-7429915387</p>
                 </div>
               </div>
-              <div className='flex items-center gap-6'>
-                <div className='bg-[#223C8C] p-3 rounded-full'>
-                  <MdMailOutline size={20} className=' text-white w-6 h-6' />
+              <div className="flex items-center gap-6">
+                <div className="bg-[#223C8C] p-3 rounded-full">
+                  <MdMailOutline size={20} className="text-white w-6 h-6" />
                 </div>
-                <div className='flex flex-col justify-start text-start'>
-                  <h2 className='font-bold lg:text-2xl'>Email</h2>
+                <div className="flex flex-col justify-start text-start">
+                  <h3 className="text-xl font-bold">Email</h3>
                   <p>imarclimitedofficial@gmail.com</p>
                 </div>
               </div>
-              <div className='flex items-center gap-6'>
-                <div className='bg-[#223C8C] p-3 rounded-full'>
-                  <IoEarth size={20} className=' text-white w-6 h-6' />
+              <div className="flex items-center gap-6">
+                <div className="bg-[#223C8C] p-3 rounded-full">
+                  <IoEarth size={20} className="text-white w-6 h-6" />
                 </div>
-                <div className='flex flex-col justify-start text-start'>
-                  <h2 className='font-bold lg:text-2xl'>Address</h2>
+                <div className="flex flex-col justify-start text-start">
+                  <h3 className="text-xl font-bold">Address</h3>
                   <p>Unit A7 4-6 Greatorex Street LONDON E1 5NF United Kingdom</p>
                 </div>
               </div>
             </div>
-            <form className="bg-[#F3F3F3] lg:w-[50%] shadow-lg p-8 space-y-6">
-              <h3 className="lg:text-4xl text-2xl font-bold mb-4 text-[#223C8C]">Send Us a Message</h3>
-              <input type="text" placeholder="Your Name" className="bg-white p-2 pl-6 w-full" />
-              <input type="email" placeholder="Your Email" className="bg-white p-2 pl-6 w-full" />
-              <input type="text" placeholder="Phone Number" className="bg-white p-2 pl-6 w-full" />
-              <textarea placeholder="Write Your Message" className="bg-white p-2 pl-6 w-full h-32"></textarea>
-              <button type="submit" className="bg-[#223C8C] hover:bg-black text-white py-3 px-6 rounded w-full">
-                Send Your Message
-              </button>
-            </form>
+            <div className="lg:w-1/2 mt-8 lg:mt-0">
+              <form className="bg-[#F3F3F3] shadow-lg p-8 space-y-6">
+                <h3 className="text-2xl font-bold mb-4 text-[#223C8C] text-center">Send Us a Message</h3>
+                <input type="text" placeholder="Your Name" className="bg-white p-2 pl-6 w-full" />
+                <input type="email" placeholder="Your Email" className="bg-white p-2 pl-6 w-full" />
+                <input type="text" placeholder="Phone Number" className="bg-white p-2 pl-6 w-full" />
+                <textarea placeholder="Write Your Message" className="bg-white p-2 pl-6 w-full h-32"></textarea>
+                <button type="submit" className="bg-[#223C8C] hover:bg-black text-white py-3 px-6 rounded w-full">
+                  Send Your Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
 
       <footer className="bg-[#1A2A44] text-white py-12">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center lg:text-left">
-            {/* Branding/Logo Section */}
             <div className="space-y-4">
-              <p className="lg:text-6xl text-3xl font-bold text-white">iMarc</p>
+              <p className="text-4xl font-bold text-white">iMarc</p>
               <p className="text-sm text-gray-400">
                 Your trusted partner in crafting impactful advertising campaigns.
               </p>
             </div>
-
-            {/* Navigation Links */}
             <div className="space-y-4 flex flex-col justify-center items-center">
-              <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-              <div className="flex flex-col justify-start items-start text-start  space-y-2 text-sm text-gray-400">
-                <button onClick={() => handleScroll(homeRef)} className="hover:text-[#223C8C] transition flex justify-start items-start">
+              <h3 className="text-xl font-bold text-white lg:pl-6">Quick Links</h3>
+              <div className="flex flex-col space-y-2 text-sm text-gray-400">
+                <button onClick={() => handleScroll(homeRef)} className="hover:text-[#223C8C] transition text-start">
                   Home
                 </button>
-                <button onClick={() => handleScroll(aboutRef)} className="hover:text-[#223C8C] transition">
+                <button onClick={() => handleScroll(aboutRef)} className="hover:text-[#223C8C] transition text-start">
                   About
                 </button>
-                <button onClick={() => handleScroll(servicesRef)} className="hover:text-[#223C8C] transition">
+                <button onClick={() => handleScroll(servicesRef)} className="hover:text-[#223C8C] transition text-start">
                   Services
                 </button>
-                <button onClick={() => handleScroll(blogsRef)} className="hover:text-[#223C8C] transition">
+                <button onClick={() => handleScroll(blogsRef)} className="hover:text-[#223C8C] transition text-start">
                   Blogs
                 </button>
-                <button onClick={() => handleScroll(testimonialsRef)} className="hover:text-[#223C8C] transition">
+                <button onClick={() => handleScroll(testimonialsRef)} className="hover:text-[#223C8C] transition text-start">
                   Testimonials
                 </button>
-                <button onClick={() => handleScroll(contactRef)} className="hover:text-[#223C8C] transition">
+                <button onClick={() => handleScroll(contactRef)} className="hover:text-[#223C8C] transition text-start">
                   Contact
                 </button>
               </div>
             </div>
-
-            {/* Contact Info */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white">Contact Us</h3>
+              <h3 className="text-xl font-bold text-white">Contact Us</h3>
               <div className="text-sm text-gray-400 space-y-2">
                 <p>Email: <a href="mailto:info@imarc.com" className="hover:text-[#223C8C] transition">info@imarc.com</a></p>
                 <p>Phone: <a href="tel:+923119813757" className="hover:text-[#223C8C] transition">+92 311 9813757</a></p>
-                <p>Office 02 First Floor, USAID Plaza, Blue Area, Islamabad</p>
+                <p>Office: 02 First Floor, USAID Plaza, Blue Area, Islamabad</p>
               </div>
             </div>
           </div>
-
-          {/* Copyright */}
-          <div className="mt-12 border-t border-gray-700 pt-6 text-center">
-            <p className="text-xs text-gray-400">© 2025 iMarc Advertising. All rights reserved.</p>
+          <div className="mt-12 border-t border-gray-600 pt-6 text-center">
+            <p className="text-xs text-gray-500">© 2025 iMarc Advertising. All rights reserved. Last updated: May 16, 2025</p>
           </div>
         </div>
       </footer>
